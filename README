@@ -1,0 +1,62 @@
+Project Name
+============
+
+External Dependencies
+---------------------
+
+This is the list of softwares and libraries required for this project.
+Pure python dependencies such as markdown.py are not be listed here since
+they are included in the project repository.
+
+* Python 2.7.x
+* Python Imaging Library > 1.1.6
+* Python psycopg2 > 2.0.6
+* Fabric > 1.5.0
+
+
+Development environment setup
+-----------------------------
+
+These are step-by-step instructions to have the project running on a local
+development environment. This includes getting a dump of the database, media files
+
+### Initial Project Setup
+
+If you are the first person setting up this project:
+
+* Install all the apps listed in `INSTALLED_APPS`.
+* Verify that the fabric taks are available: `fab --list`.
+* Update this README file:
+    * Update the `<placeholders>`.
+    * Remove this Initial Project Setup section.
+
+### Project setup
+
+    # Run setup script
+    fab local_setup
+
+    # Run the tests. Make sure they all pass
+    ./manage.py test_all
+
+    # start dev server
+    ./manage.py runserver 0:8000
+
+
+Managing devdata
+----------------
+
+    ./manage.py dump_devdata
+    ./manage.py load_devdata
+
+
+Destroy and create a new database
+---------------------------------
+
+    sudo su postgres
+    dropdb <project_name>_dev
+    createdb <project_name>_dev --owner dbuser
+    exit
+
+    cd <path-to-project>/site/<project_name>
+
+    ./manage.py load_devdata

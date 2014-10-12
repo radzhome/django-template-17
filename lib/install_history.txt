@@ -1,0 +1,6 @@
+2014-09-08 16:51:04.582040:
+./manage.py pip_install django-ckeditor django-tinymce
+Removed info files: ../lib/django_ckeditor-4.0.2-py2.7.egg-info../lib/Pillow-2.5.3.dist-info
+2014-09-08 16:51:22.342429:
+./manage.py pip_install django-ckeditor django-tinymce
+Removed info files: ../lib/django_tinymce-1.5.2-py2.7.egg-info
